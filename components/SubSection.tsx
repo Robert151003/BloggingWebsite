@@ -10,7 +10,7 @@ const SubSection = ({ name, route, classname, image }: {name:string, route:strin
     <Link href={route}>
       <Button type="submit" className={`${classname} flex flex-col`}>
       <Image
-          src={`/images/${image}`}
+          src={`/Images/${image}`}
           alt='image'
           width={150}
           height={150}
