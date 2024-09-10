@@ -4,7 +4,7 @@ import SubSection from '@/components/SubSection';
 import React from 'react';
 import { useTheme } from 'next-themes';
 
-const page = () => {
+const Page = () => {
   const { theme } = useTheme()
   return (
     <section
@@ -40,4 +40,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
