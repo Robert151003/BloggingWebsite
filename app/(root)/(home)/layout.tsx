@@ -9,7 +9,7 @@ import Cookies from "js-cookie";
 const HomeLayout = ({ children }: { children: ReactNode }) => {
   const { theme, setTheme } = useTheme()
   const [loading, setLoading] = useState(true); // Add a loading state
-  const [storedTheme, setStoredTheme] = useState<string | undefined>(Cookies.get("theme"));
+  const storedTheme = Cookies.get("theme");
 
   useEffect(() => {
     if (storedTheme) {
