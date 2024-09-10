@@ -22,8 +22,6 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
  
-  
-
   const { setTheme: setNextTheme } = useTheme();
 
   const handleThemeChange = (newTheme: string) => {
@@ -31,8 +29,6 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
     setNextTheme(newTheme); // Update the theme prop using the useTheme hook
     Cookies.set("theme", newTheme, { expires: 30 });
   };
-
-  
 
   return (
     <nav className={`flex-between fixed z-50 w-full ${theme === 'light' ? 'bg-light-1' : 'bg-dark-1'} px-6 py-4 lg:px-10`}>
@@ -70,7 +66,6 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
     </nav>
   )
 }

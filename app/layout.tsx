@@ -3,7 +3,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
 
-
 export const metadata: Metadata = {
   title: "Blog",
   icons:{
