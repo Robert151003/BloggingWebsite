@@ -21,17 +21,17 @@ const Page = () => {
       >
         <SubSection
           name='Hollow Knight'
-          route='/HollowKnight'
+          route='Gaming/HollowKnight'
           classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
         />
         <SubSection
           name='Mario'
-          route='/Mario'
+          route='Gaming/Mario'
           classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
         />
         <SubSection
-          name='Luigi'
-          route='/Mario'
+          name='Zelda'
+          route='Gaming/Zelda'
           classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
         />
         
