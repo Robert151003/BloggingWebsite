@@ -1,13 +1,19 @@
 import React from 'react'
 
-const Home = () => {
-  return (
-    <section className='flex size-full flex-col gap-10 text-white'>
-        <h1 className='text-3xl font-bold '>
-            Home
-        </h1>
+interface HomeProps {
+  theme: string | undefined;
+  setTheme: (value: string) => void;
+}
 
-        
+const Home: React.FC<HomeProps> = ({ theme, setTheme }) => {
+  
+  return (
+    <section
+      className={`flex size-full flex-col gap-10`}
+    >
+      <h1 className='text-3xl font-bold '>
+        Home
+      </h1>
     </section>
   )
 }
