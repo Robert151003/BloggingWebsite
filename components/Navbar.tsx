@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
       </Link>
 
       <div className={`flex justify-center mx-auto ${theme === 'light' ? 'text-dark' : 'text-white'}`}>
-        <Button type='submit'> <Image src={`${theme==='light' ? 'icons/search-dark.svg' : 'icons/search.svg'}`} alt='search' width={20} height={20}/> </Button>
+        <Button type='submit'> <Image src={`${theme === 'light' ? '/icons/search-dark.svg' : '/icons/search.svg'}`} alt='search' width={20} height={20}/> </Button>
         <Input type='text' placeholder='Search' className={`w-full max-w-[100px] sm:max-w-[150px] md:max-w-[200px] lg:max-w-[264px] ${theme === 'light' ? 'text-dark' : 'text-white'}`}  />
       </div>
 
