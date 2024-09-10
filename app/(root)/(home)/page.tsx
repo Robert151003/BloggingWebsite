@@ -1,3 +1,4 @@
+import Breadcrumbs from '@/components/Breadcrumbs'
 import React from 'react'
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <section
       className={`flex size-full flex-col gap-10`}
     >
+
       <h1 className='text-3xl font-bold '>
         Home
       </h1>

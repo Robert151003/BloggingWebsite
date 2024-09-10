@@ -1,13 +1,21 @@
 import Link from 'next/link'
 import React from 'react'
 import { Button } from './ui/button'
+import Image from 'next/image';
 
 
-const SubSection = ({ name, route, classname }: {name:string, route:string, classname:string}) => {
+const SubSection = ({ name, route, classname, image }: {name:string, route:string, classname:string, image:string}) => {
   console.log(`classname: ${classname}`);
   return (
     <Link href={route}>
-      <Button type="submit" className={`${classname}`}>
+      <Button type="submit" className={`${classname} flex flex-col`}>
+      <Image
+          src={`/images/${image}`}
+          alt='image'
+          width={150}
+          height={150}
+          className='py-3'
+        />
         {name}
       </Button>
     </Link>

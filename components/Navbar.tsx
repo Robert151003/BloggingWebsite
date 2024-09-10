@@ -14,6 +14,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Cookies from "js-cookie";
+import React from 'react'
+
 
 interface NavbarProps {
   theme: string | undefined;
@@ -29,6 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
     setNextTheme(newTheme); // Update the theme prop using the useTheme hook
     Cookies.set("theme", newTheme, { expires: 30 });
   };
+
 
   return (
     <nav className={`flex-between fixed z-50 w-full ${theme === 'light' ? 'bg-light-1' : 'bg-dark-1'} px-6 py-4 lg:px-10`}>
