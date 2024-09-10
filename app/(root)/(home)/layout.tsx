@@ -6,17 +6,23 @@ import { useTheme } from 'next-themes'
 import React, { ReactNode, useEffect, useState } from 'react'
 import Cookies from "js-cookie";
 
+const defaultTheme = 'light'; // Set a default theme
+
 const HomeLayout = ({ children }: { children: ReactNode }) => {
   const { theme, setTheme } = useTheme()
   const [loading, setLoading] = useState(true); // Add a loading state
   const storedTheme = Cookies.get("theme");
 
   useEffect(() => {
-    if (storedTheme) {
+    if (!storedTheme) {
+      // If no cookie is present, set the default theme as a cookie
+      Cookies.set("theme", defaultTheme);
+      setTheme(defaultTheme);
+    } else {
       setTheme(storedTheme);
-      setLoading(false); // Set loading to false once theme is updated
     }
-  }, [storedTheme, setTheme]);
+    setLoading(false); // Set loading to false once theme is updated
+  }, [storedTheme, setTheme, defaultTheme]);
 
   const { resolvedTheme } = useTheme();
 
