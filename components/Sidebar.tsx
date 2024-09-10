@@ -9,10 +9,9 @@ import { sidebarLinks } from '@/constants'
 
 interface SidebarProps {
     theme: string | undefined;
-  setTheme: (theme: string) => void;
   }
 
-const Sidebar: React.FC<SidebarProps> = ({ theme, setTheme }) => {
+const Sidebar: React.FC<SidebarProps> = ({ theme}) => {
     const pathName = usePathname();
   return (
     <section className={`'sticky left-0 top-0 flex h-screen w-fit flex-col justify-between ${theme === 'light' ? 'bg-light-1 text-dark-5' : 'bg-dark-1 text-white'} p-6 pt-28 max-sm:hidden lg:w-[264px]'`}>

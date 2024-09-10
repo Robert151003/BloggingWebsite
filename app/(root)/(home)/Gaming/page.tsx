@@ -1,11 +1,6 @@
 import React from 'react'
 
-interface PageProps {
-  theme: string | undefined;
-  setTheme: (value: string) => void;
-}
-
-const page: React.FC<PageProps> = ({ theme, setTheme }) => {
+const page = () => {
   return (
     <section
       className={`flex size-full flex-col gap-10`}

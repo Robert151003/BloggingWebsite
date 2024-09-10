@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
 import MobileNav from './MobileNav'
 import { Input } from "@/components/ui/input"
 import { Button } from './ui/button'
