@@ -1,4 +1,3 @@
-import Breadcrumbs from '@/components/Breadcrumbs'
 import React from 'react'
 
 const Home = () => {
