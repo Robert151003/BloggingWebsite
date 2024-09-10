@@ -41,7 +41,7 @@ const Page = () => {
           name='Hollow Knight'
           route='Gaming/HollowKnight'
           classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
-          image='HollowKnight.png'
+          image='HollowKnight.jpeg'
         />
         <SubSection
           name='Mario Wonder'
