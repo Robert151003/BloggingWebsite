@@ -26,7 +26,7 @@ const page = () => {
       </div>
 
       <h1 className='text-3xl font-bold'>
-        Zelda Link's Awakening
+        Zelda Link&apos;s Awakening
       </h1>
     </section>
   )
