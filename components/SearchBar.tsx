@@ -3,33 +3,13 @@ import { Button } from './ui/button';
 import Image from 'next/image';
 import { Input } from './ui/input';
 import { useTheme } from 'next-themes';
-import { Value } from '@radix-ui/react-select';
 
-const useClickOutside = (ref: React.RefObject<HTMLDivElement>) => {
-  const [isOutside, setIsOutside] = useState(false);
-
-  const handleDocumentClick = (event: MouseEvent) => {
-    if (!ref.current?.contains(event.target as Node)) {
-      setIsOutside(true);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('click', handleDocumentClick);
-    return () => {
-      document.removeEventListener('click', handleDocumentClick);
-    };
-  }, [ref]);
-
-  return isOutside;
-};
 
 const SearchBar = () => {
   const { theme } = useTheme();
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isTyping, setIsTyping] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
   const dropdownListRef = useRef<HTMLUListElement>(null);
 
   const pageList = {
@@ -40,7 +20,7 @@ const SearchBar = () => {
     "Movies": "Movies",
   }
 
-  const searchFunc = (event: React.MouseEvent<HTMLButtonElement> | string) => {
+  const searchFunc = () => {
     const inputValue = inputRef.current?.value;
     console.log(`Searching for: ${inputValue}`);
     const tempList = dropdownListRef.current;
@@ -61,9 +41,8 @@ const SearchBar = () => {
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
-    setSearchQuery(inputValue);
     setIsTyping(!!inputValue);
-    searchFunc(inputValue)
+    searchFunc()
   };
 
   const handleDropdownClick = () => {
