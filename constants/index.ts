@@ -20,5 +20,6 @@ export const sidebarLinks=[
         imgUrl: '/icons/movie',
     },
     
+    
 ]
     

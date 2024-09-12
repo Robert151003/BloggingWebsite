@@ -5,6 +5,7 @@ import React from 'react';
 import { useTheme } from 'next-themes';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { Breadcrumb } from '@/components/breadcrumb';
+import Filter from '@/components/Filter';
 
 const Page = () => {
   const { theme } = useTheme()
@@ -31,30 +32,38 @@ const Page = () => {
       <h1 className='text-3xl font-bold '>
         Gaming
       </h1>
+      <Filter />
       <div
+        id='container'
         className={`grid grid-cols-3 gap-4`}
         style={{
           gridTemplateColumns: 'repeat(3, 200px)',
         }}
       >
-        <SubSection
-          name='Hollow Knight'
-          route='Gaming/HollowKnight'
-          classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
-          image='HollowKnight.jpeg'
-        />
-        <SubSection
-          name='Mario Wonder'
-          route='Gaming/Mario'
-          classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
-          image='MarioWonder.jpeg'
-        />
-        <SubSection
-          name="Zelda Link's Awakening"
-          route='Gaming/Zelda'
-          classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
-          image='ZeldaLA.jpeg'
-        />
+        <div id='sub'>
+          <SubSection
+            name='Hollow Knight'
+            route='Gaming/HollowKnight'
+            classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
+            image='HollowKnight.jpeg'
+          />
+        </div>
+        <div id='sub'>
+          <SubSection
+            name='Mario Wonder'
+            route='Gaming/Mario'
+            classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
+            image='MarioWonder.jpeg'
+          />
+        </div>
+        <div id='sub'>
+          <SubSection
+            name="Zelda Link's Awakening"
+            route='Gaming/Zelda'
+            classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
+            image='ZeldaLA.jpeg'
+          />       
+        </div>
         
         
       </div>
