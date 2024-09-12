@@ -27,7 +27,8 @@ const config = {
           5: '#333333'
         },
         light:{
-          1:'#ECECEC'
+          1:'#ECECEC',
+          2:'#E8E8E8',
         },
         blue: {
           1: '#0E78F9',

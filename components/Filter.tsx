@@ -68,10 +68,10 @@ const Filter = () => {
       <section className='flex'>
         <Image src={`/icons/${theme === 'light' ? 'filter-dark' : 'filter'}.svg`} alt='Filter' width={32} height={32}/>
         <Select onValueChange={handleChange}>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className={`${theme === 'light' ? 'bg-light-1' : 'bg-dark-1'} w-[180px] border-none`}>
             <SelectValue placeholder="Filter" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className={`${theme === 'light' ? 'bg-light-1' : 'bg-dark-1'} border-none`}>
             <SelectItem value="Alphabetical">Alphabetical &uarr;</SelectItem>
             <SelectItem value="AlphabeticalDown">Alphabetical &darr;</SelectItem>
           </SelectContent>

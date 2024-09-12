@@ -1,6 +1,9 @@
+'use client'
+
 import Breadcrumbs from '@/components/Breadcrumbs';
 import React from 'react'
 import { Breadcrumb } from '@/components/breadcrumb';
+import Filter from '@/components/Filter';
 
 
 const page = () => {
@@ -27,6 +30,7 @@ const page = () => {
       <h1 className='text-3xl font-bold '>
         Tv-Shows
       </h1>
+      <Filter />
     </section>
   )
 }
