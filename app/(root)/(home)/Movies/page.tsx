@@ -4,9 +4,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import React from 'react'
 import { Breadcrumb } from '@/components/breadcrumb';
 import Filter from '@/components/Filter';
+import SubSection from '@/components/SubSection';
+import { useTheme } from 'next-themes';
 
 
-const page = () => {
+const Page = () => {
+  const { theme } = useTheme()
 
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Home', href: '/' },
@@ -31,8 +34,24 @@ const page = () => {
         Movies
       </h1>
       <Filter />
+      <div
+        id='container'
+        className={`grid grid-cols-3 gap-4`}
+        style={{
+          gridTemplateColumns: 'repeat(3, 200px)',
+        }}
+      >
+        <div id='sub'>
+          <SubSection
+            name='Mission Impossible'
+            route='Movies/MissionImpossible'
+            classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
+            image='MissionImpossible.jpeg'
+          />
+        </div>
+      </div>
     </section>
   )
 }
 
-export default page
+export default Page

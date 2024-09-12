@@ -8,8 +8,8 @@ const page = () => {
 
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Home', href: '/' },
-    { label: 'Gaming', href: '/Gaming' },
-    { label: 'Hollow Knight', href: 'HollowKnight' },
+    { label: 'Tv-Shows', href: '/Tv-Shows' },
+    { label: 'Adventure Time', href: 'AdventureTime' },
   ];
 
   return (
@@ -26,7 +26,7 @@ const page = () => {
       </div>
 
       <h1 className='text-3xl font-bold'>
-        Hollow Knight
+        Adventure Time
       </h1>
     </section>
   )

@@ -16,6 +16,8 @@ const SearchBar = () => {
     "./": "Home",
     "Gaming": "Gaming",
     "Gaming/HollowKnight": "Hollow Knight",
+    "Gaming/MarioWonder": "Super Mario Wonder",
+    "Gaming/LinksAwakening": "Zelda Link's Awakening",
     "Tv-Shows": "Tv-Shows",
     "Movies": "Movies",
   }

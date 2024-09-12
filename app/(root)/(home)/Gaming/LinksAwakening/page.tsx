@@ -9,7 +9,7 @@ const page = () => {
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Home', href: '/' },
     { label: 'Gaming', href: '/Gaming' },
-    { label: 'Hollow Knight', href: 'HollowKnight' },
+    { label: "Link's Awakening", href: '/Gaming/LinksAwakening' },
   ];
 
   return (
@@ -26,7 +26,7 @@ const page = () => {
       </div>
 
       <h1 className='text-3xl font-bold'>
-        Hollow Knight
+        Zelda Link's Awakening
       </h1>
     </section>
   )

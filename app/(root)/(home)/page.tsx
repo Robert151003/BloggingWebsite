@@ -1,3 +1,4 @@
+import Announcements from '@/components/Announcements'
 import React from 'react'
 
 const Home = () => {
@@ -5,6 +6,7 @@ const Home = () => {
     <section
       className={`flex size-full flex-col gap-10`}
     >
+      <Announcements Announcement='I will be rolling out an update that includes a chat subsystem where users can chat. Located at the bottom of the screen.' active={false}/>
       <h1 className='text-3xl font-bold '>
         Home
       </h1>

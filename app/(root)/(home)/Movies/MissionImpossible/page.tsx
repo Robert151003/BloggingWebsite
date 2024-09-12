@@ -8,8 +8,8 @@ const page = () => {
 
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Home', href: '/' },
-    { label: 'Gaming', href: '/Gaming' },
-    { label: 'Hollow Knight', href: 'HollowKnight' },
+    { label: 'Movies', href: '/Movies' },
+    { label: 'Mission Impossible', href: 'MissionImpossible' },
   ];
 
   return (
@@ -26,7 +26,7 @@ const page = () => {
       </div>
 
       <h1 className='text-3xl font-bold'>
-        Hollow Knight
+        Mission Impossible
       </h1>
     </section>
   )

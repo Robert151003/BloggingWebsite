@@ -51,7 +51,7 @@ const Page = () => {
         <div id='sub'>
           <SubSection
             name='Mario Wonder'
-            route='Gaming/Mario'
+            route='Gaming/MarioWonder'
             classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
             image='MarioWonder.jpeg'
           />
@@ -59,7 +59,7 @@ const Page = () => {
         <div id='sub'>
           <SubSection
             name="Zelda Link's Awakening"
-            route='Gaming/Zelda'
+            route='Gaming/LinksAwakening'
             classname={`bg-${theme === 'light' ? 'light-1' : 'dark-1'} h-full w-full p-4`}
             image='ZeldaLA.jpeg'
           />       
