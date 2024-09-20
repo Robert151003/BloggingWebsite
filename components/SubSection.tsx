@@ -7,7 +7,7 @@ import Image from 'next/image';
 const SubSection = ({ name, route, classname, image }: {name:string, route:string, classname:string, image:string}) => {
   return (
     <Link href={route}>
-      <Button type="submit" className={`${classname} flex flex-col`}>
+      <Button type="submit" className={`${classname} flex flex-col`} >
       <Image
           src={`/Images/${image}`}
           alt={name}
